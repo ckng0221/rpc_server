@@ -1,4 +1,6 @@
-# RPC Servers
+[![API Server CI](https://github.com/ckng0221/rpc_server/actions/workflows/api-server-ci.yml/badge.svg)](https://github.com/ckng0221/rpc_server/actions/workflows/api-server-ci.yml)
+
+# RPC Server
 A Remote Procedure Call (RPC) server, used as a POC for sending request to API server on ExpressJs, while the machine learning model processing at another server using Python.
 
 There are 2 servers: `api-server` and `ml-server`. 
