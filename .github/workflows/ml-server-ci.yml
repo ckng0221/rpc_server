@@ -1,0 +1,38 @@
+name: ML Server CI
+
+on:
+  push:
+    branches:
+      - main
+      - "releases/**"
+      - "features/**"
+    paths-ignore:
+      - ".github/workflows/api-server-ci.yml"
+  pull_request:
+    branches:
+      - main
+
+defaults:
+  run:
+    working-directory: ml-server
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run test
+        run: python -m unittest
