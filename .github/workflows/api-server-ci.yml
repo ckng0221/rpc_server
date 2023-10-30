@@ -6,6 +6,8 @@ on:
       - main
       - "releases/**"
       - "features/**"
+    paths-ignore:
+      - ".github/workflows/ml-server-ci.yml"
   pull_request:
     branches:
       - main

@@ -6,6 +6,8 @@ on:
       - main
       - "releases/**"
       - "features/**"
+    paths-ignore:
+      - ".github/workflows/api-server-ci.yml"
   pull_request:
     branches:
       - main
@@ -15,7 +17,7 @@ defaults:
     working-directory: ml-server
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
