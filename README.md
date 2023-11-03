@@ -33,5 +33,5 @@ npm start
 
 ```bash
 # ml-server/s
-python rpc_server.pys
+python rpc_server.py
 ```
