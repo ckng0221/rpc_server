@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "plugins": ["jest"],
+    "extends": ["eslint:recommended", "plugin:n/recommended"],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+      "no-unused-vars": ["warn"],
+      "n/no-unpublished-require": ["off"]
+    }
+}
